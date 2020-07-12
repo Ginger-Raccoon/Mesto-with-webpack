@@ -28,8 +28,10 @@
   const userNameError = document.getElementById('user-name-error');
   const jobError = document.getElementById('job-error');
 
+  const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk'
+
   const config = {
-    url: 'https://praktikum.tk/cohort11/',
+    url: `${serverUrl}/cohort11/`,
     headers: {
       authorization: '4b015664-c65d-40af-ad61-608bbd24bd98',
       'Content-Type': 'application/json'
