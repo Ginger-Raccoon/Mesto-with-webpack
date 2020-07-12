@@ -1,8 +1,8 @@
 {
-  "name": "I_kosmachev-homework11",
+  "name": "i_kosmachev-homework11",
   "homepage":"https://github.com/Ginger-Raccoon/Mesto-with-webpack.git",
   "version": "1.0.0",
-  "description": "",
+  "description": "assembly webpack, js modules",
   "main": "Api.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
