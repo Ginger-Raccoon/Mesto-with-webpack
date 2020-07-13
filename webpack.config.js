@@ -5,8 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const WebpackMd5Hash = require('webpack-md5-hash');
-const { loadavg } = require('os');
-const { loader } = require('mini-css-extract-plugin');
+
 
 module.exports = {
     entry: {
