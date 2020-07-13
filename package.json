@@ -1,6 +1,6 @@
 {
   "name": "i_kosmachev-homework11",
-  "homepage":"https://github.com/Ginger-Raccoon/Mesto-with-webpack.git",
+  "homepage": "https://github.com/Ginger-Raccoon/Mesto-with-webpack.git",
   "version": "1.0.0",
   "description": "assembly webpack, js modules",
   "main": "Api.js",
