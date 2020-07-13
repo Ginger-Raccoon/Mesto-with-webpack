@@ -1,5 +1,16 @@
+  'use strict'  
+
+  import "./style.css";
+  import {CardList} from "./js/CardList";
+  import {Card} from "./js/Card";
+  import {Api} from "./js/Api";
+  import {FormValidator} from "./js/FormValidator";
+  import {Popup} from "./js/Popup";
+  import {ImagePopup} from "./js/ImagePopup";
+  import {UserInfo} from "./js/UserInfo"; 
+
 (function () {
-  'use strict'
+
 
 
   const placesList = document.querySelector('.places-list');
@@ -17,8 +28,10 @@
   const userNameError = document.getElementById('user-name-error');
   const jobError = document.getElementById('job-error');
 
+  const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk'
+
   const config = {
-    url: 'https://praktikum.tk/cohort11/',
+    url: `${serverUrl}/cohort11/`,
     headers: {
       authorization: '4b015664-c65d-40af-ad61-608bbd24bd98',
       'Content-Type': 'application/json'
@@ -130,36 +143,3 @@
   formUser.addEventListener('submit', refreshProfile); // слушатель - обновить профиль
 
 }());
-
-// Здравствуйте!
-
-// С заданием справились хорошо, код чистый, хорошо читается.
-
-// ## Итог
-
-// - класс Api реализован согласно поставленной задаче
-// - информация о пользователе  (имя, подпись и аватар) подгружаются с сервера (GET запрос)
-// - имя и о себе можно отредактировать (отправляется PATCH запрос, новые данные)
-// - карточки подгружаются с сервера (GET запрос)
-// - обязательный функционал работает без багов
-// - корректная работа с асинхронным кодом
-// - DOM изменяется только после того, как запрос успешно выполнен
-// - ошибки сервера обрабатываются
-
-// Работа принята
-
-
-
-// ## Можно лучше
-
-// Большое количество параметров лучше передвать в метод или в конструктор используя деструктуризацию.
-
-// Например в коде:
-// ~~~
-// const newClass = new Class({ windowOne, userForm, popupObj })
-// ~~~
-// А внутри класса:
-// ~~~
-// constructor ({ userForm, popupObj, windowOne }) {...}
-// ~~~
-// И тогда порядок переменных будет неважен, это удобно
