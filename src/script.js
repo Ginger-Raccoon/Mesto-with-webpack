@@ -28,7 +28,7 @@
   const userNameError = document.getElementById('user-name-error');
   const jobError = document.getElementById('job-error');
 
-  const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk'
+  const serverUrl = NODE_ENV === 'development' ? 'http://nomoreparties.co' : 'https://nomoreparties.co'
 
   const config = {
     url: `${serverUrl}/cohort11/`,
